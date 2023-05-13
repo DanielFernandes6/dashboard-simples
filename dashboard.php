@@ -33,58 +33,22 @@
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  Dashboard
+                  Dashboard <span class="sr-only">(atual)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Orders
+                <a class="nav-link" href="?pagina=pedidos">
+                  Pedidos
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Products
+                <a class="nav-link" href="?pagina=produtos">
+                  Produtos
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Customers
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Reports
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Integrations
-                </a>
-              </li>
-            </ul>
-
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Saved reports</span>
-            </h6>
-            <ul class="nav flex-column mb-2">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Current month
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Last quarter
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Social engagement
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Year-end sale
+                <a class="nav-link" href="?pagina=clientes">
+                  Clientes
                 </a>
               </li>
             </ul>
@@ -95,6 +59,31 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
           </div>
+          
+          <?php 
+          
+          if(isset($_GET['pagina'])) {
+            
+            switch ($_GET['pagina']) {
+              case 'pedidos':
+                echo '<h2>Pedidos</h2>';
+                include 'graficos/graficoArea.php';
+              break;
+              case 'produtos':
+                echo '<h2>Produtos</h2>';
+              break;
+              case 'clientes':
+                echo '<h2>Clientes</h2>';
+              break;     
+              
+              default:
+                echo "NENHUM OPÇÃO ESCOLHIDA";
+              break;
+            }
+          }
+          ?>
+
+
 
         </main>
       </div>
