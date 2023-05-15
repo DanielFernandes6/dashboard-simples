@@ -13,10 +13,16 @@
 <body>
 
     <div class="container">
-        <form>
+        <div style="text-align: right">
+            <a href="#" role="button" class="btn btn-primary btn-sm">Relatórios</a>
+            <a href="#" role="button" class="btn btn-danger btn-sm">Voltar</a>
+        </div>
+
+        <h2>Cadastro de Vendas</h2>
+        <form action="cadastro_vendas2.php" method="post">
             <div class="form-group">
                 <label>Selecione o Mês</label>
-                <select class="form-control">
+                <select class="form-control" name="mes">
                     <option>Jan</option>
                     <option>Fev</option>
                     <option>Mar</option>
@@ -37,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label>Digite o Valor</label>
-                <input type="number" name="valor" class="form-control">
+                <input type="numeric" name="valor" class="form-control">
             </div>            
             <div style="text-align:right">
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
