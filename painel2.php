@@ -41,9 +41,9 @@
 
 <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawChart2);
 
-      function drawChart() {
+      function drawChart2() {
 
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="https://getbootstrap.com.br/favicon.ico">
+    <script src="https://kit.fontawesome.com/8786c39b09.js" crossorigin="anonymous"></script>
 
     <title>Dashboard Simples</title>
 
@@ -13,44 +14,71 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <!-- <link href="dashboard.css" rel="stylesheet"> -->
+
+    <style type="text/css">
+        @media only screen and (max-width: 600px) {
+          body {
+            width: 350px;
+            text-align: center;
+          }
+        }
+    </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Ideal Code</a>
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sign out</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg d-none d-sm-block" style="background-color: #250352; color: #fff">
+      <a class="navbar-brand" href="#" style="text-decoration: none; color: #fff"><img src="https://user-images.githubusercontent.com/1256531/43319337-f5ea7a92-9169-11e8-9622-a3c7f0a0e5c4.png" width="50px" height="50px">Ideal Code</a>
+      <button class="navbar-toggler" type="button" data-toggle="collpase" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container" style="margin-top: -50px">
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration:none; color: #fff">
+                          Ideal Code
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Ação</a>
+                          <a class="dropdown-item" href="#">Outra Ação</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Algo mais aqui</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
     </nav>
 
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <nav class="col-md-2 d-none d-md-block sidebar" style='background-color:#fff; boder-right: 1px solid #f3f3f3'>
           <div class="sidebar-sticky">
-            <ul class="nav flex-column">
+
+            <ul class="nav flex-column" style="padding-top: 20px">
               <li class="nav-item">
-                <a class="nav-link active" href="?pagina">
-                  Dashboard <span class="sr-only">(atual)</span>
+                <a class="nav-link active" href="?pagina" style="color:#000;text-decoration: none">
+                 <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard <span class="sr-only">(atual)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="?pagina=pedidos">
-                  Pedidos
+                <a class="nav-link" href="?pagina=pedidos" style="color:#000;text-decoration: none">
+                <i class="fas fa-box"></i>&nbsp;Pedidos
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="?pagina=clientes">
-                  Cadastrar Clientes
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="?pagina=vendas">
-                  Cadastrar Vendas
-                </a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?pagina=clientes" style="color:#000;text-decoration: none">
+
+                <i class="far fa-user"></i>&nbsp;Cadastrar Clientes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?pagina=vendas" style="color:#000;text-decoration: none">
+
+                <i class="fas fa-dollar-sign"></i>&nbsp;Cadastrar Vendas
+              </a>
+            </li>
             </ul>
           </div>
         </nav>
@@ -92,13 +120,55 @@
       </div>
     </div>
 
+    <div class="d-block d-sm-none">
+    <nav class="navbar fixed-bottom navbar-light bg-light ">
+      <a class="navbar-brand" href="#">Ideal Code</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" 
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li>
+              <a class="nav-link active" href="?pagina">
+
+                Dashboard <span class="sr-only">(atual)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?pagina=pedidos" style="text-decoration: none">
+                Pedidos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?pagina=clientes">
+                Cadastrar Clientes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?pagina=vendas">
+                Cadastrar Vendas
+              </a>
+            </li>            
+          </ul>
+      </div>
+    </nav>
+    </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
 
+      $(window).resize(function(){
+        drawChart();
+        drawChart2();
+      });
+    </script>
    
   </body>
 </html>
