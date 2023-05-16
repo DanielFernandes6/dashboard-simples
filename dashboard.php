@@ -80,6 +80,7 @@
               
               default:
                 include 'painel.php';
+                include 'painel2.php';
               break;
             }
           }
